@@ -1,6 +1,6 @@
 {
   "name": "uos",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A tiny 250b scroll listener with progress.",
   "main": "dist/uos.mjs",
   "unpkg": "dist/uos.umd.js",
