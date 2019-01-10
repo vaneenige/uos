@@ -21,9 +21,7 @@ function tick() {
 
 function uos(begin, end, callback) {
   instances.push([begin, end, callback]);
-  if (instances.length < 2) {
-    window.addEventListener('scroll', tick, false);
-  }
+  window.addEventListener('scroll', tick, { passive: true });
 }
 
 export default uos;
