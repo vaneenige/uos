@@ -1,0 +1,142 @@
+html,
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  letter-spacing: 0;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 14px;
+  margin: 0;
+}
+
+.lines1 {
+  position: absolute;
+  left: 40px;
+  background: repeating-linear-gradient(
+    to bottom,
+    #78909c,
+    #78909c 1px,
+    transparent 1px,
+    transparent 10px
+  );
+  height: 2001px;
+  width: 70px;
+}
+
+.lines2 {
+  position: absolute;
+  left: 40px;
+  background: repeating-linear-gradient(
+    to bottom,
+    #ef5350,
+    #ef5350 1px,
+    transparent 1px,
+    transparent 100px
+  );
+  height: 2001px;
+  width: 140px;
+}
+
+.lines3 {
+  position: absolute;
+  right: 40px;
+  background: repeating-linear-gradient(
+    to bottom,
+    #78909c,
+    #78909c 1px,
+    transparent 1px,
+    transparent calc((2001px - 100vh) / 100)
+  );
+  height: calc(2002px - 100vh);
+  width: 70px;
+}
+
+.lines4 {
+  position: absolute;
+  right: 40px;
+  background: repeating-linear-gradient(
+    to bottom,
+    #42a5f5,
+    #42a5f5 1px,
+    transparent 1px,
+    transparent calc((2001px - 100vh) / 4)
+  );
+  height: calc(2002px - 100vh);
+  width: 140px;
+}
+
+body {
+  height: 2001px;
+  display: block;
+  padding: 20px 0;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.numbers1 li {
+  color: #ef5350;
+  position: absolute;
+  left: 10px;
+  font-size: 10px;
+  list-style: none;
+  text-align: right;
+  width: 20px;
+  transform: translateY(-50%);
+}
+
+.numbers2 li {
+  color: #42a5f5;
+  position: absolute;
+  right: 10px;
+  font-size: 10px;
+  list-style: none;
+  text-align: left;
+  width: 20px;
+  transform: translateY(-50%);
+}
+
+.container {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  color: #78909c;
+}
+
+.label {
+  padding: 12px;
+  border-bottom: 1px solid #78909c;
+}
+
+.pixels li,
+.percentages li {
+  padding: 12px;
+}
+
+.card {
+  background: white;
+  padding: 0;
+  border: 1px solid #78909c;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+span {
+  float: right;
+}
