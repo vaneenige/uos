@@ -1,21 +1,18 @@
-const instances = [];
+const observers = [];
 
 function tick() {
-  let i=0, arr, val;
-
-  for (; i < instances.length; i++) {
-    arr = instances[i]; // [begin, end, callback]
-
-    val = arr[1] <= 1
-      ? (window.pageYOffset / (document.body.scrollHeight - window.innerHeight) - arr[0]) / (arr[1] - arr[0])
-      : (window.pageYOffset - arr[0]) / (arr[1] - arr[0]);
-
-    arr[2](val < 0 ? 0 : val > 1 ? 1 : val);
+  let i = observers.length, o, r;
+  while (i--) {
+    o = observers[i];
+    r = o[1] <= 1
+        ? (pageYOffset / (document.body.scrollHeight - innerHeight) - o[0]) / (o[1] - o[0])
+        : (pageYOffset - o[0]) / (o[1] - o[0]);
+    o[2](r < 0 ? 0 : r > 1 ? 1 : r);
   }
 }
 
 function uos(begin, end, callback) {
-  instances.push([begin, end, callback]) > 1 || window.addEventListener('scroll', tick, { passive: true });
+  observers.push([begin, end, callback]) > 1 || addEventListener('scroll', tick, { passive: true });
 }
 
 export default uos;
