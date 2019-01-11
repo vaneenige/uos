@@ -1,21 +1,16 @@
 const instances = [];
 
-function mm(v) {
-  if (v < 0) return 0;
-  if (v > 1) return 1;
-  return v;
-}
-
 function tick() {
-  const { pageYOffset, innerHeight } = window;
-  const { scrollHeight } = document.body;
-  for (let i = 0; i < instances.length; i += 1) {
-    const [begin, end, callback] = instances[i];
-    const result =
-      end <= 1
-        ? (pageYOffset / (scrollHeight - innerHeight) - begin) / (end - begin)
-        : (pageYOffset - begin) / (end - begin);
-    callback(mm(result));
+  let i=0, arr, val;
+
+  for (; i < instances.length; i++) {
+    arr = instances[i]; // [begin, end, callback]
+
+    val = arr[1] <= 1
+      ? (window.pageYOffset / (document.body.scrollHeight - window.innerHeight) - arr[0]) / (arr[1] - arr[0])
+      : (window.pageYOffset - arr[0]) / (arr[1] - arr[0]);
+
+    arr[2](val < 0 ? 0 : val > 1 ? 1 : val);
   }
 }
 
