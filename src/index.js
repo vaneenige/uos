@@ -15,8 +15,7 @@ function tick() {
 }
 
 function uos(begin, end, callback) {
-  instances.push([begin, end, callback]);
-  window.addEventListener('scroll', tick, { passive: true });
+  instances.push([begin, end, callback]) > 1 || window.addEventListener('scroll', tick, { passive: true });
 }
 
 export default uos;
