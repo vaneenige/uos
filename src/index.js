@@ -12,10 +12,10 @@ function tick() {
 }
 
 export default function (begin, end, func, len) {
-	len = observers.push([begin, end, func]);
-	len > 1 || addEventListener('scroll', tick);
+  len = observers.push([begin, end, func]);
+  len > 1 || addEventListener('scroll', tick);
   return function (toRemove) {
-  	observers.splice(len - 1, 1);
-  	if (toRemove) removeEventListener('scroll', tick);
+    observers.splice(len - 1, 1);
+    if (toRemove) removeEventListener('scroll', tick);
   }
 }
