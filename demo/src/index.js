@@ -1,4 +1,4 @@
-import uos from './../../src/index.js';
+import uos from './../../dist/uos';
 
 function withOffset(begin, end, callback) {
   const offset = 20;

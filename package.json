@@ -1,9 +1,11 @@
 {
   "name": "uos",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "A tiny 250b scroll listener with progress.",
+  "source": "src/index.ts",
   "main": "dist/uos.mjs",
   "unpkg": "dist/uos.umd.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "start": "http-server demo --silent & $npm_execpath run watch",
     "watch": "microbundle watch --format umd --entry demo/src/index.js --output demo/dist/bundle.js",
@@ -14,6 +16,7 @@
     "type": "git",
     "url": "git+https://github.com/vaneenige/uos.git"
   },
+  "license": "MIT",
   "author": {
     "name": "Colin van Eenige",
     "email": "cvaneenige@gmail.com",
@@ -27,9 +30,13 @@
     "scroll",
     "progress"
   ],
-  "license": "MIT",
+  "prettier": {
+    "printWidth": 100,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
   "devDependencies": {
     "http-server": "^0.11.1",
-    "microbundle": "^0.9.0"
+    "microbundle": "^0.11.0"
   }
 }

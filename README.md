@@ -4,8 +4,9 @@
 [![gzip size](http://img.badgesize.io/https://unpkg.com/uos/dist/uos.mjs?compression=gzip)](https://unpkg.com/uos)
 [![license](https://img.shields.io/npm/l/uos.svg)](https://github.com/vaneenige/uos/blob/master/LICENSE)
 [![dependencies](https://img.shields.io/badge/dependencies-none-ff69b4.svg)](https://github.com/vaneenige/uos/blob/master/package.json)
+[![TypeScript](https://img.shields.io/static/v1.svg?label=&message=TypeScript&color=294E80)](https://www.typescriptlang.org/)
 
-Update On Scroll (uos) is a **250b** library to provide the easiest way for updating values on scroll. Based on percentual or pixel based begin and end values, progress is returned trough a callback.
+Update On Scroll (uos) is a tiny library to provide the easiest way for updating values on scroll. Based on percentual or pixel based begin and end values, progress is returned trough a callback.
 
 This utility can be useful for CSS animations, DOM changes, WebGL transitions or anything that can be updated based on a progress value.
 
